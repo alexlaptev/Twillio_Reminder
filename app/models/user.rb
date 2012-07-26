@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   attr_accessible :url, :username
 
-
+  has_many :clients
   def self.find_for_facebook_oauth access_token
      if user = User.where(:url => access_token.info.urls.Facebook).first
        user
@@ -17,4 +17,5 @@ class User < ActiveRecord::Base
        User.create!(:url => access_token.info.urls.Facebook, :username => access_token.extra.raw_info.name, :email => access_token.extra.raw_info.email, :password => Devise.friendly_token[0,20]) 
      end
   end
+  
 end

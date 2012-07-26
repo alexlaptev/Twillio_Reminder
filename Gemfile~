@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.3'
+gem 'rails', '3.2.6'
 gem 'sqlite3', :group => :development
 
 group :assets do
@@ -15,4 +15,3 @@ gem 'twitter-bootstrap-rails'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
-gem 'omniauth-vkontakte'

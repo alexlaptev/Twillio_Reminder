@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b F name:
+  = @client.f_name
+%p
+  %b L name:
+  = @client.l_name
+%p
+  %b User:
+  = @client.user_id
+
+= link_to 'Edit', edit_client_path(@client)
+\|
+= link_to 'Back', clients_path
